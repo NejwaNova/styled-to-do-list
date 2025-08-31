@@ -3,23 +3,57 @@ body{
     padding: 20px;
     font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
     background: radial-gradient(circle, pink, rgb(230, 71, 97), rgb(253, 42, 141), pink, rgb(212, 45, 73));
+    min-height: 100vh;
+    box-sizing: border-box;
 }
+
+/* Mobile-first responsive design */
+@media (max-width: 768px) {
+    body {
+        margin: 10px;
+        padding: 10px;
+    }
+}
+
 h1{
     display: flex;
     justify-content: center;
     color: antiquewhite;
     text-shadow:3px 2px 2px rgb(231, 73, 73) , 6px 3px 2px silver,
     9px 4px 2px rgb(160, 59, 76);
+    text-align: center;
+    font-size: 2.5rem;
+    margin-bottom: 20px;
 }
+
+@media (max-width: 768px) {
+    h1 {
+        font-size: 2rem;
+        text-shadow: 2px 1px 1px rgb(231, 73, 73), 4px 2px 1px silver,
+        6px 3px 1px rgb(160, 59, 76);
+    }
+}
+
 #h2{
     background: radial-gradient(ellipse, rgb(214, 187, 118), rgb(236, 201, 135), rgb(235, 128, 128));
     border-radius: 30px;
-    padding: 10px 0;
+    padding: 10px 20px;
     text-align: center;
-    font-size: small;
+    font-size: 1rem;
     text-shadow: none;
     color:rgb(84, 50, 116);
+    margin: 20px auto;
+    max-width: 90%;
 }
+
+@media (max-width: 768px) {
+    #h2 {
+        font-size: 0.9rem;
+        padding: 8px 15px;
+        border-radius: 20px;
+    }
+}
+
 h2{
     display: flex;
     justify-content: center;
@@ -28,37 +62,90 @@ h2{
     6px 3px 2px palevioletred,
     9px 5px 2px rgb(245, 148, 245);
     font-size: 30px;
+    text-align: center;
+    margin: 20px 0;
 }
+
+@media (max-width: 768px) {
+    h2 {
+        font-size: 24px;
+        text-shadow: 2px 1px 1px pink,
+        4px 2px 1px palevioletred,
+        6px 3px 1px rgb(245, 148, 245);
+    }
+}
+
 h3{
     display: flex;
     justify-content: center;
     color:white;
-    padding:auto 10px;
+    padding: 10px;
+    text-align: center;
+    margin: 10px 0;
 }
+
+@media (max-width: 768px) {
+    h3 {
+        font-size: 1.1rem;
+        padding: 8px;
+    }
+}
+
 h4{
     display: flex;
     justify-content: center;
     color: rgb(219, 75, 104);
     text-shadow: 1px 1px 1px rgb(59, 58, 58);
     text-decoration: underline 3px;
+    margin: 15px 0 10px 0;
+}
 
+@media (max-width: 768px) {
+    h4 {
+        font-size: 1rem;
+        margin: 12px 0 8px 0;
+    }
 }
+
 .box {
-    border: 2px solid rgb(209, 13, 216); /* border */
-    display: flex;           /* flex layout */
-    flex-direction: row;     /* default: horizontal layout */
-    justify-content: center; /* center items horizontally */
-    align-items: center;     /* center items vertically */
-    width: 30%;              /* 60% of parent container */
-    margin: 20px auto;       /* center box in page */
-    padding: 20px;           /* inner spacing */
-    gap: 15px;               /* space between flex items */
+    border: 2px solid rgb(209, 13, 216);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 90%;
+    max-width: 600px;
+    margin: 20px auto;
+    padding: 20px;
+    gap: 15px;
     border-radius: 10px;
+    box-sizing: border-box;
 }
+
+@media (max-width: 768px) {
+    .box {
+        width: 95%;
+        padding: 15px;
+        gap: 10px;
+    }
+}
+
 li{
     list-style: none;
     justify-content: center;
+    text-align: center;
+    margin: 8px 0;
+    font-size: 1rem;
+    line-height: 1.4;
 }
+
+@media (max-width: 768px) {
+    li {
+        font-size: 0.9rem;
+        margin: 6px 0;
+    }
+}
+
 input:checked{
     appearance: none;
     width: 10px;
@@ -66,45 +153,124 @@ input:checked{
     background: linear-gradient(to right, pink, violet);
     border-radius: 10px;
 }
+
 .fox{
     display: flex;
-    gap: 10px;    
+    gap: 10px;
+    flex-wrap: wrap;
+    justify-content: center;
 }
+
+@media (max-width: 768px) {
+    .fox {
+        flex-direction: column;
+        gap: 15px;
+    }
+}
+
 .full{
-    flex: 1; /* each box takes equal space */
+    flex: 1;
+    min-width: 250px;
     border: solid 2px rgb(209, 13, 216);
     border-radius: 10px;
     height: auto;
+    padding: 15px;
+    box-sizing: border-box;
+}
+
+@media (max-width: 768px) {
+    .full {
+        min-width: auto;
+        width: 100%;
+        padding: 12px;
+    }
 }
 
 div p{
     display: flex;
+    text-align: center;
+    justify-content: center;
+    line-height: 1.5;
 }
+
+@media (max-width: 768px) {
+    div p {
+        font-size: 0.9rem;
+        padding: 0 10px;
+    }
+}
+
 .ll{
     list-style: circle;
+    text-align: left;
+    margin: 8px 0;
 }
+
+@media (max-width: 768px) {
+    .ll {
+        font-size: 0.9rem;
+        margin: 6px 0;
+    }
+}
+
 .kk{
     list-style: lower-roman;
+    text-align: left;
+    margin: 5px 0 5px 20px;
 }
+
+@media (max-width: 768px) {
+    .kk {
+        font-size: 0.85rem;
+        margin: 4px 0 4px 15px;
+    }
+}
+
 .lox, .rox {
-  flex: 1;             /* each takes equal width */
+  flex: 1;
   border: 2px solid rgb(114, 7, 117);
   border-radius: 10px;
   padding: 20px;
   text-align: center;
-  box-sizing: border-box; /* include padding in width */
+  box-sizing: border-box;
   margin: 10px 0;
+  min-width: 250px;
 }
+
+@media (max-width: 768px) {
+    .lox, .rox {
+        min-width: auto;
+        width: 100%;
+        padding: 15px;
+        margin: 8px 0;
+    }
+}
+
 .nn{
     display: flex;
     gap: 20px;
+    flex-wrap: wrap;
+    justify-content: center;
 }
 
-
+@media (max-width: 768px) {
+    .nn {
+        flex-direction: column;
+        gap: 15px;
+    }
+}
 
 .container {
   display: flex;
   gap: 20px;
+  flex-wrap: wrap;
+}
+
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column;
+        gap: 15px;
+    }
 }
 
 .lox, .rox {
@@ -117,6 +283,11 @@ div p{
   position: relative;
 }
 
+@media (max-width: 768px) {
+    .lox, .rox {
+        padding: 35px 15px 15px;
+    }
+}
 
 .stamp {
   position: absolute;
@@ -133,4 +304,214 @@ div p{
   opacity: 0.8;
   text-transform: uppercase;
   letter-spacing: 1px;
+}
+
+@media (max-width: 768px) {
+    .stamp {
+        font-size: 12px;
+        padding: 3px 8px;
+    }
+}
+
+/* Additional mobile optimizations */
+@media (max-width: 480px) {
+    body {
+        margin: 5px;
+        padding: 5px;
+    }
+    
+    h1 {
+        font-size: 1.8rem;
+    }
+    
+    h2 {
+        font-size: 20px;
+    }
+    
+    .box {
+        width: 98%;
+        padding: 12px;
+    }
+    
+    .full, .lox, .rox {
+        padding: 10px;
+    }
+    
+    li {
+        font-size: 0.85rem;
+    }
+}
+
+/* Ensure proper touch targets on mobile */
+@media (max-width: 768px) {
+    input[type="checkbox"] {
+        min-width: 20px;
+        min-height: 20px;
+    }
+    
+    /* Improve spacing for mobile */
+    br {
+        display: none;
+    }
+    
+    li {
+        padding: 8px 0;
+    }
+}
+
+/* Enhanced mobile responsiveness for new HTML structure */
+.tasks-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    width: 100%;
+}
+
+.task-category {
+    margin-bottom: 20px;
+    padding: 15px;
+    border-radius: 8px;
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+}
+
+@media (max-width: 768px) {
+    .task-category {
+        margin-bottom: 15px;
+        padding: 12px;
+    }
+}
+
+.task-item {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin: 10px 0;
+    padding: 8px 0;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+@media (max-width: 768px) {
+    .task-item {
+        gap: 10px;
+        margin: 8px 0;
+        padding: 6px 0;
+    }
+}
+
+.task-item:hover {
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 6px;
+    padding-left: 8px;
+}
+
+.task-item input[type="checkbox"] {
+    min-width: 20px;
+    min-height: 20px;
+    cursor: pointer;
+    accent-color: rgb(209, 13, 216);
+}
+
+.task-item label {
+    cursor: pointer;
+    user-select: none;
+    flex: 1;
+    font-size: 1rem;
+    line-height: 1.4;
+    color: inherit;
+}
+
+@media (max-width: 768px) {
+    .task-item label {
+        font-size: 0.9rem;
+    }
+}
+
+/* Enhanced section styling */
+.tasks-section, .notes-section, .focus-section {
+    margin-bottom: 30px;
+}
+
+@media (max-width: 768px) {
+    .tasks-section, .notes-section, .focus-section {
+        margin-bottom: 25px;
+    }
+}
+
+/* Improved header styling */
+header {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+@media (max-width: 768px) {
+    header {
+        margin-bottom: 25px;
+    }
+}
+
+/* Enhanced main content */
+main {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+@media (max-width: 768px) {
+    main {
+        padding: 0 15px;
+    }
+}
+
+@media (max-width: 480px) {
+    main {
+        padding: 0 10px;
+    }
+}
+
+/* Better mobile spacing */
+@media (max-width: 768px) {
+    .box {
+        margin: 15px auto;
+    }
+    
+    .fox {
+        margin: 15px 0;
+    }
+    
+    .nn {
+        margin: 15px 0;
+    }
+}
+
+/* Enhanced touch interactions */
+@media (max-width: 768px) {
+    .task-item:active {
+        background: rgba(255, 255, 255, 0.3);
+        transform: scale(0.98);
+    }
+    
+    .full:active, .lox:active, .rox:active {
+        transform: scale(0.98);
+        transition: transform 0.1s ease;
+    }
+}
+
+/* Improved accessibility */
+.task-item input[type="checkbox"]:focus + label {
+    outline: 2px solid rgb(209, 13, 216);
+    outline-offset: 2px;
+    border-radius: 4px;
+}
+
+/* Better mobile typography */
+@media (max-width: 480px) {
+    .task-item label {
+        font-size: 0.85rem;
+    }
+    
+    h4 {
+        font-size: 0.95rem;
+    }
 }
